@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+{% block content %}
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .form-container h3 {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            margin-top: 10px;
+        }
+        .form-group input {
+            margin-bottom: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+    <div class="form-container">
+        <form method="POST">
+            <h3 align="center">Sign Up</h3>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Enter Email"
+                    required
+                />
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="form-control"
+                    placeholder="Enter Username"
+                    required
+                />
+                <label for="password1">Password</label>
+                <input
+                    type="password"
+                    id="password1"
+                    name="password1"
+                    class="form-control"
+                    placeholder="Enter Password"
+                    required
+                />
+                <label for="password2">Password Again</label>
+                <input
+                    type="password"
+                    id="password2"
+                    name="password2"
+                    class="form-control"
+                    placeholder="Enter Password Again"
+                    required
+                />
+                <br />
+                <div align="center">
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
